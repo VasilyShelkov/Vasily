@@ -2,25 +2,30 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
-  entry: [
-    'webpack-hot-middleware/client',
-    './app/App.js'
-  ],
+  entry: './app/App',
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js',
-    publicPath: '/public/'
+    publicPath: '/public/',
+    filename: 'bundle.js'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.ProvidePlugin({
+      riot: 'riot'
+    })
   ],
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, 'app')
+    loaders: [{ 
+      test: /\.tag$/, 
+      include: path.join(__dirname, 'app'), 
+      loader: 'riotjs-loader', 
+      query: { type: 'none' } 
+    }, {
+      test: /\.js|\.tag$/, 
+      include: path.join(__dirname, 'app'), 
+      loader: 'babel-loader' 
     }]
+  },
+  devServer: {
+    contentBase: './public'
   }
 };

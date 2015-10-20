@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
+  devtool: 'eval',
   entry: './app/App',
   output: {
     path: path.join(__dirname, 'public'),
@@ -14,18 +15,22 @@ module.exports = {
     })
   ],
   module: {
-    loaders: [{ 
+    preLoaders: [{
       test: /\.tag$/, 
       include: path.join(__dirname, 'app'), 
       loader: 'riotjs-loader', 
-      query: { type: 'none' } 
-    }, {
+      query: { type: 'es6' } 
+    }],
+    loaders: [{
       test: /\.js|\.tag$/, 
       include: path.join(__dirname, 'app'), 
-      loader: 'babel-loader' 
+      loader: 'babel-loader', 
+      query: {modules: 'common'}
     }]
   },
   devServer: {
-    contentBase: './public'
+    contentBase: './public',
+    hot: true,
+    inline: true
   }
 };

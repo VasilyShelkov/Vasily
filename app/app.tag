@@ -1,6 +1,12 @@
-require('./name.tag');
+import './components/nav-bar.tag';
+import './components/splash.tag'
+import './components/personality/developer.tag'
 
 <app>
-	<name first="Hello" last="World"></name>
-	<name first="Ola" last="Mundo"></name>
+		<nav-bar />
+		<splash windowheight={this.windowHeight}/>
+		<developer>
+	<script>
+	this.windowHeight = $( window ).height();
+	</script>
 </app>

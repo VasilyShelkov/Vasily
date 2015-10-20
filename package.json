@@ -4,7 +4,7 @@
   "description": "Personal website for vasi.ly",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.dev.js --inline --hot",
+    "start": "node devServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,9 +13,9 @@
   },
   "keywords": [
     "Node.js",
-    "webpack",
-    "riot",
-    "riotjs"
+    "ReactJs",
+    "React-motion",
+    "universal"
   ],
   "author": "Vasily Shelkov",
   "license": "MIT",
@@ -28,12 +28,19 @@
     "babel-loader": "^5.3.2",
     "babel-plugin-react-transform": "^1.1.1",
     "eslint": "^1.6.0",
+    "eslint-plugin-react": "^3.5.1",
     "express": "^4.13.3",
-    "riot": "^2.2.4",
-    "riotjs-loader": "^1.2.0",
+    "history": "^1.12.5",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-router": "^1.0.0-rc3",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.1.1",
     "webpack": "^1.12.2"
   },
   "devDependencies": {
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.4.1"
   }
 }

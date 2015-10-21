@@ -1,0 +1,12 @@
+.hover-color-change {
+	color:white;
+	OTransition:color .5s ease-out, background .5s ease-in;
+	MsTransition:color .5s ease-out, background .5s ease-in;
+	MozTransition:color .5s ease-out, background .5s ease-in;
+	WebkitTransition:color .5s ease-out, background .5s ease-in;
+	transition:color .5s ease-out, background .5s ease-in
+}
+
+.hover-color-change:hover {
+	color:darkgreen;
+}

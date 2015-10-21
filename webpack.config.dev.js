@@ -19,8 +19,9 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, 'app')
+      loader: 'babel',
+      include: path.join(__dirname, 'app'),
+      query: {stage:1}
     }]
   }
 };

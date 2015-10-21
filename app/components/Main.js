@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StickyNav from './navigation/StickyNav';
 import Splash from './Splash';
 import Developer from './personalities/Developer';
 
@@ -32,9 +33,12 @@ class Main extends Component {
 	render() {
 		return(
 			<div>
-				<Splash windowHeight={this.state.windowHeight} windowTop={this.state.windowTop}/>
+				<Splash windowHeight={this.state.windowHeight}/>
+				
+				<StickyNav windowHeight={this.state.windowHeight} windowTop={this.state.windowTop}/>
 
 				<Developer />
+
 			</div>
 		);
 	}

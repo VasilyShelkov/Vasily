@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PersonalityNav from './PersonalityNav';
+import PersonalityNav from './personality/PersonalityNav';
 import SplashProfile from './SplashProfile';
 
 

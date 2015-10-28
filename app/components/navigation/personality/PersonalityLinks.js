@@ -9,17 +9,18 @@ class PersonalityLinks extends Component {
 		var personalities = ['Developer,','Explorer, ','Early-Adopter, ','Anime-Lover'].map((personality, index) => {
 			var personalityLetters = personality.split('').map((letter, index) => {
 				return (
-					<Letter letter={letter} key={index} index={index} />
+					<Letter letter={letter} key={index}/>
 				);
 			});
+			var noComma = personality.replace(',', '');
 			return (
-				<a key={index}>
+				<a key={index} href={`#profile/${noComma}`}>
 					{personalityLetters} 
 				</a>
 			);
 		});
 		return (
-			<div id="personalities" className="flow-text col-xs-8 center-align valign">
+			<div id="personalities" className="flow-text col-xs-10 center-align valign">
 				{openCB}
 				{personalities}
 				{closedCB}

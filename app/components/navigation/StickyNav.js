@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PersonalityNav from './personality/PersonalityNav';
 import SplashProfile from './SplashProfile';
+import SectionsNav from './SectionsNav';
 
 
 class StickyNav extends Component {
@@ -45,19 +46,22 @@ class StickyNav extends Component {
 		};
 		return (
 			<div id="navBar" style={stickyNavStyle}>
-				<div className="container white-text">
-					<PersonalityNav />
 
-					<div className="col-xs-12 hidden-sm-up">
-						<div className="col-xs-8 col-xs-offset-2">
-							<img id="me" src="images/me.jpg" className="circle responsive-img"/>
+				<div className="col-sm-12">
+					<div className="container white-text">
+						<PersonalityNav />
+
+						<div className="col-xs-12 hidden-sm-up">
+							<div className="col-xs-8 col-xs-offset-2">
+								<img id="me" src="images/me.jpg" className="circle responsive-img"/>
+							</div>
 						</div>
+
+						<SplashProfile showImg={this.state.showImg} />
 					</div>
 
-					<SplashProfile showImg={this.state.showImg} />
+					<SectionsNav showImg={!this.state.showImg}/>
 				</div>
-
-
 			</div>
 		);
 	}

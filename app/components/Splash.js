@@ -21,11 +21,11 @@ class Splash extends Component{
 			bottom: '0'
 		};
 		return (
-			<div className="parallax-container" style={overlayStyle}>
+			<div id="home" className="parallax-container" style={overlayStyle}>
 				<div className="parallax">
 					<img src="images/unknown.jpg"/>
 				</div>
-				<a href="#">
+				<a href="#profile">
 					<i className="fa fa-angle-double-down faa-bounce animated faa-slow center-align" style={downStyle}></i>
 				</a>
 			</div>

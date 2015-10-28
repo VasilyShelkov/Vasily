@@ -8,8 +8,8 @@ class PersonalityNav extends Component {
 			fontSize: '3em'
 		};
 		return (
-			<div className="col-xs-12 valign-wrapper">
-				<div className="col-xs-2 center-align" style={iconStyle}>		
+			<div className="col-sm-12 valign-wrapper">
+				<div className="col-xs-1 center-align" style={iconStyle}>		
 					<Icon href="https://uk.linkedin.com/in/vasilyshelkov"  
 						target="_blank" 
 						className="fa fa-linkedin-square" 
@@ -23,7 +23,7 @@ class PersonalityNav extends Component {
 				
 				<PersonalityLinks />
 
-				<div className="col-xs-2 center-align" style={iconStyle}>
+				<div className="col-xs-1 center-align" style={iconStyle}>
 					<Icon href="mailto:vasilydshelkov@gmail.com" 
 						className="fa fa-envelope" 
 						style={{color:'yellowgreen'}}></Icon>

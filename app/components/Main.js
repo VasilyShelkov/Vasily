@@ -15,6 +15,18 @@ class Main extends Component {
 	componentDidMount(){
 		window.addEventListener('resize', this.handleResize.bind(this));
 		window.addEventListener('scroll', this.handleOnScroll.bind(this));
+		$('a[href^="#"]').on('click',function (e) {
+			e.preventDefault();
+
+			var target = this.hash;
+			var $target = $(target);
+
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top
+			}, 1500, 'swing', function () {
+				window.location.hash = target;
+			});
+		});
 	}
 
 	componentWillUnmount() {

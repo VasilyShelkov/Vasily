@@ -18,9 +18,9 @@ class Letter extends Component {
 			top:spring(0, presets.wobbly)
 		}];
 		return (
-			<SequentialMotion index={`letter${this.props.index}`} styles={animationStyles}>
+			<SequentialMotion styles={animationStyles}>
 				{({left, top}) =>
-					<span id={`letter${this.props.index}`} style={{
+					<span style={{
 						transform: `translate(${left}px, ${top}px)`,
 						WebkitTransform: `translate(${left}px, ${top}px)`,
 						display: 'inline-block'

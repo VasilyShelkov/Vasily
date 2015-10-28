@@ -10,9 +10,9 @@ class SplashProfile extends Component {
 					<div 
 						style={{
 							opacity: x,
-							scale: x,
 							transform: `scale(${x})`,
-							WebkitTransform: `scale(${x})`
+							WebkitTransform: `scale(${x})`,
+							display: x < 0.05 ? 'none' : 'block' 
 						}} 
 						>
 						<div className="col-xs-12 valign-wrapper">
